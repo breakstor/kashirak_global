@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باقات كاشيرك | خطط وأسعار الاشتراكات</title>
+    <script>
+    (function(){
+        var lang = localStorage.getItem('kashirak_lang') || 'ar';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = (lang === 'en') ? 'ltr' : 'rtl';
+    })();
+    </script>
+    <link rel="stylesheet" href="i18n.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --red:#c6382d;
+            --red-dark:#a92d25;
+            --navy:#29394d;
+            --purple:#5142df;
+            --green:#42b85b;
+            --text:#29394d;
+            --muted:#8b8b8b;
+            --bg:#f5f6f8;
+            --white:#fff;
+            --border:#e7e7e7;
+        }
+
+        *{box-sizing:border-box}
+
+        body{
+            margin:0;
+            font-family:"Tajawal",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+            background:var(--bg);
+            color:var(--text);
+        }
+
+        .topbar{
+            height:74px;
+            background:linear-gradient(135deg,#c73a2f,#a92d25);
+            color:#fff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            position:sticky;
+            top:0;
+            z-index:20;
+            box-shadow:0 4px 14px rgba(0,0,0,.12);
+        }
+
+        .topbar-inner{
+            width:min(1100px,92%);
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:15px;
+        }
+
+        .topbar h1{
+            font-size:25px;
+            margin:0;
+            font-weight:800;
+        }
+
+        .top-icon{
+            color:#fff;
+            text-decoration:none;
+            font-size:30px;
+            line-height:1;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            background:rgba(255,255,255,.12);
+            transition:background .2s ease;
+        }
+        .top-icon:hover{
+            background:rgba(255,255,255,.24);
+        }
+
+        .hero{
+            text-align:center;
+            padding:48px 20px 28px;
+        }
+
+        .hero h2{
+            margin:0 0 14px;
+            font-size:36px;
+            line-height:1.4;
+            font-weight:900;
+        }
+
+        .hero p{
+            margin:0 auto;
+            max-width:650px;
+            color:#888;
+            font-size:19px;
+            line-height:1.9;
+        }
+
+        .section-title{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            max-width:850px;
+            margin:28px auto 34px;
+            padding:0 18px;
+            font-size:27px;
+            font-weight:900;
+        }
+
+        .section-title::before{
+            content:"";
+            width:7px;
+            height:44px;
+            border-radius:8px;
+            background:var(--red);
+            flex:none;
+        }
+
+        .pricing-list{
+            width:min(760px,92%);
+            margin:0 auto 55px;
+        }
+
+        .plan{
+            background:#fff;
+            border:3px solid var(--red);
+            border-radius:28px;
+            padding:28px 38px 34px;
+            margin-bottom:34px;
+            box-shadow:0 8px 28px rgba(35,48,64,.06);
+            position:relative;
+            overflow:visible;
+        }
+
+        .plan.pro{border-color:var(--purple)}
+        .plan.multi{border-color:#2d9f99}
+        .plan.custom{border-color:#29394d}
+        .addon{border-color:#d38a1f}
+
+        .badge{
+            position:absolute;
+            top:-19px;
+            right:50%;
+            transform:translateX(50%);
+            padding:9px 24px;
+            border-radius:30px;
+            color:#fff;
+            background:linear-gradient(90deg,#ffb000,#ff5031);
+            font-size:16px;
+            font-weight:800;
+            white-space:nowrap;
+            box-shadow:0 5px 12px rgba(0,0,0,.14);
+        }
+
+        .pro .badge{background:linear-gradient(90deg,#4f3fe0,#7936df)}
+        .multi .badge{background:linear-gradient(90deg,#168f8a,#2eaea3)}
+        .custom .badge{background:#29394d}
+        .addon .badge{background:linear-gradient(90deg,#d88918,#efad22)}
+
+        .plan-head{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:15px;
+            margin-top:10px;
+        }
+
+        .plan h3{
+            margin:0;
+            font-size:31px;
+            font-weight:900;
+        }
+
+        .plan-tag{
+            background:#f3dddd;
+            color:var(--red);
+            padding:7px 15px;
+            border-radius:22px;
+            font-weight:800;
+            font-size:14px;
+        }
+
+        .pro .plan-tag{color:#5142df;background:#e7e4ff}
+        .multi .plan-tag{color:#168f8a;background:#dff3f1}
+        .custom .plan-tag{color:#29394d;background:#e9edf2}
+        .addon .plan-tag{color:#a5670d;background:#fff0d2}
+
+        .description{
+            color:#999;
+            font-size:17px;
+            line-height:1.9;
+            margin:10px 0 20px;
+        }
+
+        .tabs{
+            display:flex;
+            background:#f4f4f4;
+            border:1px solid #ddd;
+            border-radius:16px;
+            padding:4px;
+            margin:18px 0 18px;
+        }
+
+        .tab{
+            flex:1;
+            border:0;
+            background:transparent;
+            border-radius:12px;
+            padding:12px 8px;
+            font-family:inherit;
+            font-size:16px;
+            font-weight:800;
+            color:#777;
+            cursor:pointer;
+        }
+
+        .tab.active{
+            background:var(--red);
+            color:#fff;
+            box-shadow:0 2px 7px rgba(0,0,0,.1);
+        }
+
+        .pro .tab.active{background:var(--purple)}
+        .multi .tab.active{background:#168f8a}
+        .custom .tab.active{background:#29394d}
+        .addon .tab.active{background:#c98719}
+
+        .price{
+            min-height:88px;
+            display:flex;
+            align-items:end;
+            justify-content:flex-start;
+            gap:10px;
+            margin:6px 0 18px;
+        }
+
+        .price strong{
+            font-size:48px;
+            line-height:1;
+            font-weight:900;
+        }
+
+        .price span{
+            color:#999;
+            font-size:18px;
+            margin-bottom:5px;
+        }
+
+        .price-note{
+            color:#888;
+            font-size:15px;
+            margin:-5px 0 15px;
+        }
+
+        .cta{
+            display:block;
+            width:100%;
+            border:0;
+            border-radius:17px;
+            padding:18px 20px;
+            color:#fff;
+            background:var(--red);
+            text-align:center;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:900;
+            font-family:inherit;
+            cursor:pointer;
+            margin:8px 0 24px;
+            transition:transform .2s ease, box-shadow .2s ease;
+        }
+        .cta:hover{
+            transform:translateY(-2px);
+            box-shadow:0 8px 20px rgba(0,0,0,.12);
+        }
+
+        .pro .cta{background:var(--purple)}
+        .multi .cta{background:#168f8a}
+        .custom .cta{background:#29394d}
+        .addon .cta{background:#c98719}
+
+        .features{
+            list-style:none;
+            padding:0;
+            margin:0;
+        }
+
+        .features li{
+            position:relative;
+            padding:9px 38px 9px 0;
+            font-size:17px;
+            line-height:1.65;
+        }
+
+        .features li::before{
+            content:"✓";
+            position:absolute;
+            right:0;
+            top:9px;
+            width:26px;
+            height:26px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:var(--green);
+            color:#fff;
+            font-weight:900;
+        }
+
+        .features li.primary::before{
+            background:var(--red);
+        }
+
+        .pro .features li.primary::before{background:var(--red)}
+        .multi .features li.primary::before{background:#168f8a}
+
+        .custom-box{
+            text-align:center;
+            padding:15px 0 5px;
+        }
+
+        .custom-box strong{
+            display:block;
+            font-size:29px;
+            margin-bottom:8px;
+        }
+
+        .custom-box p{
+            color:#888;
+            line-height:1.9;
+            margin:0 0 18px;
+            font-size:17px;
+        }
+
+        .custom-price{
+            font-size:25px;
+            font-weight:900;
+            margin:10px 0 22px;
+        }
+
+        .addon-section{
+            padding-bottom:25px;
+        }
+
+        .footer-note{
+            text-align:center;
+            color:#999;
+            font-size:14px;
+            padding:10px 20px 45px;
+        }
+
+        @media(max-width:600px){
+            .topbar{height:70px}
+            .topbar h1{font-size:21px}
+            .hero{padding:38px 18px 24px}
+            .hero h2{font-size:29px}
+            .hero p{font-size:17px}
+            .section-title{font-size:24px;margin-bottom:32px}
+            .pricing-list{width:92%}
+            .plan{padding:27px 20px 28px;border-radius:24px}
+            .plan h3{font-size:27px}
+            .plan-head{align-items:flex-start}
+            .description{font-size:16px}
+            .price strong{font-size:43px}
+            .features li{font-size:16px}
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <a class="top-icon back-arrow" href="index.html" aria-label="العودة للرئيسية">→</a>
+        <h1 data-i18n="pricing_page_title">باقات واشتراكات كاشيرك</h1>
+        <button type="button" class="lang-switcher-btn" id="langSwitch" aria-label="Switch Language">
+            <span class="lang-globe">🌐</span>
+            <span class="lang-name">English</span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <h2 data-i18n="pricing_hero_title">ارتقِ بمبيعات متجرك إلى مستوى جديد</h2>
+        <p data-i18n="pricing_hero_desc">اختر الخطة التي تناسب حجم أعمالك. أسعار واضحة وخيارات مرنة تواكب نمو متجرك.</p>
+    </section>
+
+    <h2 class="section-title" data-i18n="pricing_section_title">خطط الاشتراك الأساسية</h2>
+
+    <section class="pricing-list">
+
+        <!-- BASIC -->
+        <article class="plan">
+            <div class="badge" data-i18n="plan_basic_badge">مناسب للمتاجر الصغيرة</div>
+
+            <div class="plan-head">
+                <h3 data-i18n="plan_basic_title">الخطة الأساسية</h3>
+                <span class="plan-tag" data-i18n="plan_basic_tag">جهاز واحد</span>
+            </div>
+
+            <p class="description" data-i18n="plan_basic_desc">
+                كاشير أوفلاين يعمل على جهاز واحد لإدارة عمليات البيع والمخزون دون الحاجة للاتصال بالإنترنت.
+            </p>
+
+            <div class="tabs" data-plan="basic">
+                <button class="tab active" data-period="monthly" data-i18n="tab_monthly">شهري</button>
+                <button class="tab" data-period="yearly" data-i18n="tab_yearly">سنوي (وفر)</button>
+            </div>
+
+            <div class="price">
+                <strong data-monthly="12" data-yearly="99">12</strong>
+                <span data-i18n="price_unit_month">$ / شهر</span>
+            </div>
+
+            <p class="price-note" data-i18n="price_basic_note">الدفع السنوي: 99 دولار</p>
+
+            <a class="cta" href="index.html#final-download" data-i18n="btn_basic_cta">اشترك في الخطة الأساسية</a>
+
+            <ul class="features">
+                <li class="primary" data-i18n="feat_basic_1">كاشير أوفلاين يعمل بكفاءة على جهاز واحد</li>
+                <li class="primary" data-i18n="feat_basic_2">إدارة المتجر ونقطة البيع من نفس الجهاز</li>
+                <li data-i18n="feat_basic_3">إنشاء فواتير مبيعات وإيصالات غير محدودة</li>
+                <li data-i18n="feat_basic_4">إدارة كاملة للمخزون والمنتجات والباركود</li>
+                <li data-i18n="feat_basic_5">تقارير مبيعات وأرباح مفصلة</li>
+                <li data-i18n="feat_basic_6">دعم فني وتحديثات مستمرة</li>
+            </ul>
+        </article>
+
+        <!-- PRO -->
+        <article class="plan pro">
+            <div class="badge" data-i18n="plan_pro_badge">الأكثر طلباً — للأعمال النامية ⭐</div>
+
+            <div class="plan-head">
+                <h3 data-i18n="plan_pro_title">المتقدمة (Pro)</h3>
+                <span class="plan-tag" data-i18n="plan_pro_tag">عدة أجهزة</span>
+            </div>
+
+            <p class="description" data-i18n="plan_pro_desc">
+                إدارة الفرع من عدة أجهزة كاشير مع رفع البيانات سحابياً وتطبيق إدارة منفصل للمالك.
+            </p>
+
+            <div class="tabs" data-plan="pro">
+                <button class="tab active" data-period="monthly" data-i18n="tab_monthly">شهري</button>
+                <button class="tab" data-period="yearly" data-i18n="tab_yearly">سنوي (وفر)</button>
+            </div>
+
+            <div class="price">
+                <strong data-monthly="25" data-yearly="220">25</strong>
+                <span data-i18n="price_unit_month">$ / شهر</span>
+            </div>
+
+            <p class="price-note" data-i18n="price_pro_note">الدفع السنوي: 220 دولار</p>
+
+            <a class="cta" href="index.html#final-download" data-i18n="btn_pro_cta">اشترك في باقة برو</a>
+
+            <ul class="features">
+                <li class="primary" data-i18n="feat_pro_1">إضافة عدة أجهزة كاشير لنفس الفرع</li>
+                <li class="primary" data-i18n="feat_pro_2">لوحة تحكم للإدارة ومتابعة المبيعات لحظياً</li>
+                <li class="primary" data-i18n="feat_pro_3">مزامنة سحابية فورية وآمنة بين الأجهزة</li>
+                <li data-i18n="feat_pro_4">إنشاء فواتير مبيعات ومشتريات غير محدودة</li>
+                <li data-i18n="feat_pro_5">إدارة كاملة للمخزون والمنتجات والباركود وجرد المستودع</li>
+                <li data-i18n="feat_pro_6">تقارير أرباح متقدمة وتحليلات ذكية للمبيعات</li>
+                <li data-i18n="feat_pro_7">إدارة ورديات الموظفين وصلاحيات المستخدمين</li>
+                <li data-i18n="feat_pro_8">نسخ احتياطي سحابي تلقائي واستعادة آمنة</li>
+                <li data-i18n="feat_pro_9">تطبيق إدارة منفصل للهواتف الذكية</li>
+                <li data-i18n="feat_pro_10">دعم فني ذو أولوية على مدار الساعة</li>
+            </ul>
+        </article>
+
+        <!-- MULTI BRANCH -->
+        <article class="plan multi">
+            <div class="badge" data-i18n="plan_multi_badge">لأصحاب الفروع المتعددة</div>
+
+            <div class="plan-head">
+                <h3 data-i18n="plan_multi_title">باقة الفروع المتعددة</h3>
+                <span class="plan-tag" data-i18n="plan_multi_tag">فروع وأجهزة متعددة</span>
+            </div>
+
+            <p class="description" data-i18n="plan_multi_desc">
+                إدارة عدة فروع وعدة أجهزة بشكل متزامن مع تطبيق إدارة مركزي موحد.
+            </p>
+
+            <div class="price">
+                <strong>15</strong>
+                <span data-i18n="price_multi_unit">$ / فرع / شهر</span>
+            </div>
+
+            <p class="price-note" data-i18n="price_multi_note">15 دولار لكل فرع شهرياً. السعر الإجمالي يعتمد على عدد الفروع.</p>
+
+            <a class="cta" href="index.html#final-download" data-i18n="btn_multi_cta">تواصل معنا للاشتراك</a>
+
+            <ul class="features">
+                <li class="primary" data-i18n="feat_multi_1">إدارة عدة فروع تجارية من نظام موحد</li>
+                <li class="primary" data-i18n="feat_multi_2">عدة أجهزة كاشير لكل فرع</li>
+                <li class="primary" data-i18n="feat_multi_3">مزامنة البيانات بين الفروع والأجهزة لحظياً</li>
+                <li data-i18n="feat_multi_4">تطبيق إدارة مركزي وتقارير مقارنة أداء الفروع</li>
+                <li data-i18n="feat_multi_5">تتبع حركة المخزون والتحويل بين الفروع</li>
+                <li data-i18n="feat_multi_6">تقارير مالية موحدة وإدارة مركزية شاملة</li>
+            </ul>
+        </article>
+
+        <!-- CUSTOM -->
+        <article class="plan custom">
+            <div class="badge" data-i18n="plan_custom_badge">حلول المؤسسات الكبرى</div>
+
+            <div class="plan-head">
+                <h3 data-i18n="plan_custom_title">الباقة المخصصة</h3>
+                <span class="plan-tag" data-i18n="plan_custom_tag">حسب الاحتياجات</span>
+            </div>
+
+            <p class="description" data-i18n="plan_custom_desc">
+                تصميم وتطوير النظام ليناسب احتياجات المؤسسات والأنشطة التجارية الكبيرة.
+            </p>
+
+            <div class="custom-box">
+                <strong data-i18n="custom_box_title">تسعير مخصص حسب الاحتياجات</strong>
+                <p data-i18n="custom_box_desc">
+                    نحدد السعر بعد دراسة حجم العمل، عدد الفروع والأجهزة،
+                    والخصائص المطلوبة للمؤسسة.
+                </p>
+                <div class="custom-price" data-i18n="custom_box_price">اطلب عرضاً مخصصاً</div>
+            </div>
+
+            <a class="cta" href="index.html#final-download" data-i18n="btn_custom_cta">اطلب عرضاً مخصصاً</a>
+
+            <ul class="features">
+                <li data-i18n="feat_custom_1">حلول مصممة خصيصاً للمؤسسات والشركات الكبرى</li>
+                <li data-i18n="feat_custom_2">تخصيص النظام وقواعد البيانات حسب طبيعة النشاط</li>
+                <li data-i18n="feat_custom_3">دعم التوسع لعدد غير محدود من المستخدمين والفروع</li>
+                <li data-i18n="feat_custom_4">تطوير ميزات خاصة والربط مع أنظمة ERP عبر API</li>
+            </ul>
+        </article>
+
+    </section>
+
+    <section class="addon-section">
+        <h2 class="section-title" data-i18n="addon_section_title">العناصر والإضافات الاختيارية</h2>
+
+        <div class="pricing-list">
+
+            <!-- E-COMMERCE -->
+            <article class="plan addon">
+                <div class="badge" data-i18n="addon_store_badge">متجر إلكتروني متكامل</div>
+
+                <div class="plan-head">
+                    <h3 data-i18n="addon_store_title">باقة المتجر الإلكتروني</h3>
+                    <span class="plan-tag" data-i18n="addon_store_tag">إضافة اختيارية</span>
+                </div>
+
+                <p class="description" data-i18n="addon_store_desc">
+                    أنشئ متجرك الإلكتروني بالكامل بدون خبرة برمجية،
+                    وانشر منتجاتك وابدأ استقبال الطلبات أونلاين.
+                </p>
+
+                <div class="tabs" data-plan="store">
+                    <button class="tab active" data-period="monthly" data-i18n="tab_monthly">شهري</button>
+                    <button class="tab" data-period="yearly" data-i18n="tab_yearly">سنوي (وفر)</button>
+                </div>
+
+                <div class="price">
+                    <strong data-monthly="15" data-yearly="135">15</strong>
+                    <span data-i18n="price_unit_month">$ / شهر</span>
+                </div>
+
+                <p class="price-note" data-i18n="price_store_note">الدفع السنوي: 135 دولار</p>
+
+                <a class="cta" href="index.html#final-download" data-i18n="btn_store_cta">أضف المتجر الإلكتروني</a>
+
+                <ul class="features">
+                    <li class="primary" data-i18n="feat_store_1">إنشاء متجر إلكتروني متكامل واحترافي دون برمجة</li>
+                    <li data-i18n="feat_store_2">نشر وإدارة المنتجات والمجموعات والأسعار بسهولة</li>
+                    <li data-i18n="feat_store_3">تخصيص كامل لمظهر المتجر وهوية علامتك التجارية</li>
+                    <li data-i18n="feat_store_4">استقبال وإدارة الطلبات وتنبيهات المبيعات الفورية</li>
+                    <li data-i18n="feat_store_5">ربط فوري وتلقائي مع منتجات ومخزون كاشيرك</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+    <p class="footer-note" data-i18n="pricing_footer_note">جميع الأسعار بالدولار الأمريكي ($) شاملة التحديثات المستمرة والدعم الفني.</p>
+</main>
+
+<script>
+document.querySelectorAll(".tabs").forEach(tabs => {
+    const buttons = tabs.querySelectorAll(".tab");
+    const card = tabs.closest(".plan");
+    const price = card.querySelector(".price strong");
+    const unit = card.querySelector(".price span");
+    const note = card.querySelector(".price-note");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            buttons.forEach(b => b.classList.remove("active"));
+            button.classList.add("active");
+
+            const period = button.dataset.period;
+            const currentLang = document.documentElement.lang || 'ar';
+
+            if (price && price.dataset.monthly && price.dataset.yearly) {
+                if (period === "yearly") {
+                    price.textContent = price.dataset.yearly;
+                    unit.textContent = currentLang === 'en' ? "$ / year" : "$ / سنة";
+                    if (note) note.style.display = "none";
+                } else {
+                    price.textContent = price.dataset.monthly;
+                    unit.textContent = currentLang === 'en' ? "$ / month" : "$ / شهر";
+                    if (note) note.style.display = "";
+                }
+            }
+        });
+    });
+});
+
+window.addEventListener('kashirak_lang_changed', (e) => {
+    const lang = e.detail.lang;
+    document.querySelectorAll(".tabs").forEach(tabs => {
+        const activeBtn = tabs.querySelector(".tab.active");
+        const period = activeBtn ? activeBtn.dataset.period : 'monthly';
+        const card = tabs.closest(".plan");
+        const unit = card ? card.querySelector(".price span") : null;
+        if (unit) {
+            if (card.classList.contains("multi")) {
+                unit.textContent = lang === 'en' ? "$ / branch / month" : "$ / فرع / شهر";
+            } else if (period === "yearly") {
+                unit.textContent = lang === 'en' ? "$ / year" : "$ / سنة";
+            } else {
+                unit.textContent = lang === 'en' ? "$ / month" : "$ / شهر";
+            }
+        }
+    });
+});
+</script>
+<script src="translations.js"></script>
+</body>
+</html>

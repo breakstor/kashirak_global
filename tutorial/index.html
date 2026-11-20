@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="tut_page_title">شروحات كاشيرك | دليل الاستخدام بالفيديو</title>
+    <script>
+    (function(){
+        var lang = localStorage.getItem('kashirak_lang') || 'ar';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = (lang === 'en') ? 'ltr' : 'rtl';
+    })();
+    </script>
+    <link rel="stylesheet" href="tutorial.css">
+    <link rel="stylesheet" href="../i18n.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="tutorial-header">
+        <div class="container header-flex">
+            <a href="../index.html" class="logo" data-i18n="logo_kashirak">كاشيرك</a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <a href="../index.html" class="back-btn" data-i18n="tut_nav_back">العودة للرئيسية</a>
+                <button type="button" class="lang-switcher-btn" id="langSwitch" aria-label="Switch Language">
+                    <span class="lang-globe">🌐</span>
+                    <span class="lang-name">English</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 data-i18n="tut_hero_title">فيديوهات شرح استخدام تطبيق كاشيرك</h1>
+            <p data-i18n="tut_hero_desc">تعلم استخدام التطبيق خطوة بخطوة من خلال فيديوهات تعليمية مبسطة وأدلة تفصيلية.</p>
+        </div>
+    </section>
+
+    <section class="videos-section">
+        <div class="container">
+
+            <!-- ========================================================= -->
+            <!-- VIDEO 1 -->
+            <!-- ========================================================= -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/ApjBHp-VCj8"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-content">
+                    <h2 data-i18n="tut_v1_title">طريقة الإعداد وإنشاء الحساب في التطبيق</h2>
+                    <p data-i18n="tut_v1_desc">شرح كامل لطريقة إنشاء الحساب وتجهيز المتجر للعمل لأول مرة.</p>
+                    <button class="lesson-toggle" data-i18n="tut_btn_show">عرض خطوات الشرح</button>
+                    <div class="lesson-content" data-i18n-html="tut_l1_content">
+                        <p><strong>تشغيل التطبيق والترحيب</strong></p>
+                        <ul>
+                            <li>عند فتح التطبيق لأول مرة، تخطَّ شاشات الترحيب بالنقر على "التالي" ثم "ابدأ الآن".</li>
+                            <li>انقر على زر "ابدأ الإعداد" في شاشة الترحيب بالتهيئة.</li>
+                        </ul>
+                        <p><strong>تحديد نوع الحساب</strong></p>
+                        <ul>
+                            <li>مستخدم قديم: لتسجيل الدخول واستعادة بيانات المتجر السابقة.</li>
+                            <li>مستخدم جديد: لإنشاء متجر جديد والبدء لأول مرة.</li>
+                        </ul>
+                        <p><strong>ضبط بيانات النشاط التجاري</strong></p>
+                        <ul>
+                            <li>تحديد نوع النشاط التجاري وتصنيف المتجر بدقة.</li>
+                            <li>إدخال اسم المتجر، العنوان، وأرقام الهاتف للتواصل.</li>
+                        </ul>
+                        <p><strong>معلومات المالك والأمان</strong></p>
+                        <ul>
+                            <li>إدخال اسم المالك والبريد الإلكتروني الرسمي.</li>
+                            <li>تعيين كلمة مرور قوية وإضافة رمز PIN لتسهيل الدخول السريع.</li>
+                        </ul>
+                        <p><strong>الموظفون والورديات</strong></p>
+                        <ul>
+                            <li>إضافة البائعين وتحديد ورديات العمل وصلاحيات المستخدمين.</li>
+                        </ul>
+                        <p><strong>إعدادات الكاشير الذكية</strong></p>
+                        <ul>
+                            <li>تفعيل الخدمات الإضافية والمدفوعة.</li>
+                            <li>تفعيل البيع الآجل (إدارة دفتر الديون).</li>
+                            <li>تفعيل تعدد العملات والتسعير المرن.</li>
+                        </ul>
+                        <p><strong>الحسابات البنكية والفترة التجريبية</strong></p>
+                        <ul>
+                            <li>إضافة الحسابات البنكية الخاصة بالمتجر لتسهيل التحويلات.</li>
+                            <li>تفعيل الفترة التجريبية المجانية لبدء العمل فوراً.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- VIDEO 2 -->
+            <!-- ========================================================= -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/m_QMqSwxC9k"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-content">
+                    <h2 data-i18n="tut_v2_title">شرح محتويات لوحة التحكم في التطبيق</h2>
+                    <p data-i18n="tut_v2_desc">شرح شامل لأقسام الإدارة والتحكم الكامل داخل التطبيق.</p>
+                    <button class="lesson-toggle" data-i18n="tut_btn_show">عرض خطوات الشرح</button>
+                    <div class="lesson-content" data-i18n-html="tut_l2_content">
+                        <p><strong>لوحة التحكم الرئيسية</strong></p>
+                        <ul>
+                            <li>واجهة مخصصة لصاحب المتجر والإدارة فقط.</li>
+                            <li>تمنحك التحكم الكامل في الحساب والمخزون والمبيعات والتقارير المالية.</li>
+                        </ul>
+                        <p><strong>النظرة العامة ومؤشرات الأداء</strong></p>
+                        <ul>
+                            <li>عرض إجمالي المبيعات اليومية والشهرية وصافي الأرباح بصورة فورية.</li>
+                        </ul>
+                        <p><strong>أقسام الإدارة والتشغيل</strong></p>
+                        <ul>
+                            <li>المنتجات وإدارة المخزون والباركود.</li>
+                            <li>المبيعات وإصدار الفواتير.</li>
+                            <li>الإحصائيات والتحليلات البيانية.</li>
+                            <li>التقارير المالية والأرباح.</li>
+                            <li>تسجيل وإدارة المصروفات التشغيلية.</li>
+                            <li>دفتر الديون وحسابات العملاء.</li>
+                            <li>إدارة الموردين وحسابات المشتريات.</li>
+                            <li>سجل المدفوعات والتحويلات.</li>
+                            <li>أرشيف الورديات وجرد الكاشير اليومي.</li>
+                            <li>إدارة المستخدمين وصلاحيات الموظفين.</li>
+                            <li>إعدادات الكاشير ونقاط البيع.</li>
+                            <li>النسخ الاحتياطي السحابي التلقائي.</li>
+                            <li>إدارة الطابعات الحرارية والأجهزة الملحقة.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- VIDEO 3 -->
+            <!-- ========================================================= -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/euVmtFfFOvo"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-content">
+                    <h2 data-i18n="tut_v3_title">شرح طريقة إضافة المنتجات للتطبيق وإدارة المخزون</h2>
+                    <p data-i18n="tut_v3_desc">تعلم طريقة إضافة المنتجات وإدارة المخزون وتتبع الباركود داخل كاشيرك.</p>
+                    <button class="lesson-toggle" data-i18n="tut_btn_show">عرض خطوات الشرح</button>
+                    <div class="lesson-content" data-i18n-html="tut_l3_content">
+                        <p><strong>إضافة منتج جديد</strong></p>
+                        <ul>
+                            <li>إدراج صورة توضيحية للمنتج.</li>
+                            <li>كتابة اسم المنتج بدقة وتحديد القسم أو التصنيف.</li>
+                            <li>مسح الباركود باستخدام الكاميرا أو قارئ الباركود.</li>
+                            <li>تحديد سعر التكلفة (سعر الشراء) وسعر البيع.</li>
+                            <li>تحديد الكمية الأولية المتوفرة في المخزون.</li>
+                            <li>ضبط تنبيه الحد الأدنى للمخزون لتلقي إشعارات قبل النفاد.</li>
+                        </ul>
+                        <p><strong>أدوات إدارة المخزون والجرد</strong></p>
+                        <ul>
+                            <li>إصدار تقارير جرد المخزون التفصيلية في أي وقت.</li>
+                            <li>الاستيراد الشامل للمنتجات عبر ملفات Excel بنقرة واحدة.</li>
+                            <li>تصدير بيانات المنتجات والمخزون إلى ملف Excel للمراجعة.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- VIDEO 4 -->
+            <!-- ========================================================= -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/O58B58KB8OM"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-content">
+                    <h2 data-i18n="tut_v4_title">شرح شاشة الكاشير وخيارات البيع السريع</h2>
+                    <p data-i18n="tut_v4_desc">شرح واجهة الكاشير اليومية وأدوات البيع وإصدار الفواتير السريعة.</p>
+                    <button class="lesson-toggle" data-i18n="tut_btn_show">عرض خطوات الشرح</button>
+                    <div class="lesson-content" data-i18n-html="tut_l4_content">
+                        <p><strong>شاشة الكاشير اليومية</strong></p>
+                        <ul>
+                            <li>الشاشة الرئيسية والعملية للبائعين لإتمام المبيعات بسرعة وسلاسة.</li>
+                            <li>متابعة حركة المبيعات المباشرة وحساب إجمالي الفاتورة لحظياً.</li>
+                        </ul>
+                        <p><strong>أدوات البيع وإصدار الفواتير</strong></p>
+                        <ul>
+                            <li>اختيار المنتجات عبر الأقسام المصنفة أو البحث السريع.</li>
+                            <li>مسح الباركود بسرعة فائقة لإضافة المنتجات فوراً.</li>
+                            <li>إمكانية إضافة منتج حر غير مسجل في القائمة.</li>
+                            <li>تعديل الكميات وتطبيق الخصومات بسهولة.</li>
+                            <li>تحديد طريقة الدفع وإصدار الإيصال المطبوع.</li>
+                        </ul>
+                        <p><strong>الأقسام المساعدة للبائع</strong></p>
+                        <ul>
+                            <li>تسجيل الخدمات الإضافية المدفوعة.</li>
+                            <li>متابعة درج النقدية اليومي وجرد الصندوق.</li>
+                            <li>تسجيل المصاريف اليومية العاجلة من الصندوق.</li>
+                            <li>استعراض فواتير اليوم وإعادة طباعتها أو تعديلها.</li>
+                            <li>الآلة الحاسبة المدمجة لإجراء العمليات الحسابية السريعة.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- VIDEO 5 -->
+            <!-- ========================================================= -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/FfK8PdxMwao"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-content">
+                    <h2 data-i18n="tut_v5_title">عمليات البيع والدفع والخدمات وتوثيق التحويلات</h2>
+                    <p data-i18n="tut_v5_desc">شرح طريقة إجراء عمليات بيع المنتجات والخدمات ووسائل الدفع وتوثيق المعاملات.</p>
+                    <button class="lesson-toggle" data-i18n="tut_btn_show">عرض خطوات الشرح</button>
+                    <div class="lesson-content" data-i18n-html="tut_l5_content">
+                        <p><strong>تجهيز الفاتورة وإتمام البيع</strong></p>
+                        <ul>
+                            <li>اختيار المنتجات المراد بيعها ومسح الباركود.</li>
+                            <li>إدراج بنود مخصصة أو منتجات حرة عند الحاجة.</li>
+                            <li>تعديل الكميات وضبط الخصم إن وجد.</li>
+                        </ul>
+                        <p><strong>وسائل الدفع المتعددة</strong></p>
+                        <ul>
+                            <li>الدفع النقدي (كاش) مع احتساب المبلغ المتبقي تلقائياً.</li>
+                            <li>التحويلات البنكية والمحافظ الرقمية والبطاقات المصرفية.</li>
+                            <li>البيع الآجل (إضافة الحساب إلى دفتر الديون باسم العميل).</li>
+                        </ul>
+                        <p><strong>التحقق من التحويلات الإلكترونية</strong></p>
+                        <ul>
+                            <li>إمكانية تصوير وإرفاق إشعار التحويل البنكي مع الفاتورة.</li>
+                            <li>مطابقة قيمة التحويل مع إجمالي الفاتورة تلقائياً.</li>
+                            <li>حفظ الرقم المرجعي للعملية البنكية لسهولة التدقيق المالي.</li>
+                        </ul>
+                        <p><strong>تسجيل وإدارة الخدمات</strong></p>
+                        <ul>
+                            <li>إضافة الخدمات المدفوعة كبند مستقل في الفاتورة.</li>
+                            <li>تسجيل قيمة الخدمة وحفظها داخل التقارير اليومية والأرباح.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- VIDEO 6 -->
+            <!-- ========================================================= -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/aR9nK_MwThQ"
+                        title="الدرس السادس - نظام الخصومات"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-content">
+                    <h2 data-i18n="tut_v6_title">نظام الخصومات والتخفيضات وتحديد الحد الأقصى</h2>
+                    <p data-i18n="tut_v6_desc">تعلّم كيفية تفعيل نظام الخصومات داخل التطبيق وتحديد الحد الأقصى المسموح به للبائعين.</p>
+                    <button class="lesson-toggle" data-i18n="tut_btn_show">عرض خطوات الشرح</button>
+                    <div class="lesson-content" data-i18n-html="tut_l6_content">
+                        <p><strong>دليل نظام الخصومات وتحديد الحد الأقصى</strong></p>
+                        <p><strong>1. ما هي ميزة الخصومات؟</strong></p>
+                        <ul>
+                            <li>تتيح للبائعين إمكانية تطبيق تخفيضات مالية لحظية على الفواتير أثناء عملية البيع والمفاوضات مع العملاء.</li>
+                            <li>تُستخدم لتقديم العروض الترويجية، ومكافأة العملاء الدائمين، أو البيع بأسعار الجملة.</li>
+                        </ul>
+                        <p><strong>2. طريقة تفعيل نظام الخصومات (للمالك والمدير)</strong></p>
+                        <ul>
+                            <li>توجه إلى لوحة التحكم ثم افتح قسم "إعدادات الكاشير".</li>
+                            <li>قم بتفعيل خيار "نظام الخصومات".</li>
+                            <li>حدد السقف الأقصى المسموح به للخصم للبائعين (مثلاً 10%).</li>
+                            <li>عند محاولة إدخال خصم أعلى من النسبة المحددة، سيمنع النظام إتمام العملية ويعرض تنبيهاً لحماية أرباح المتجر.</li>
+                        </ul>
+                        <p><strong>3. خطوات تطبيق الخصم في شاشة الكاشير (للبائع)</strong></p>
+                        <ul>
+                            <li>افتح شاشة الكاشير وابدأ عملية بيع جديدة وأضف المنتجات المطلوبة.</li>
+                            <li>انقر على خيار "تخفيض" ضمن أدوات الفاتورة.</li>
+                            <li>ستظهر شاشة توضح السعر الأصلي والحد المسموح به للخصم والمبلغ بعد التخفيض.</li>
+                            <li>أدخل قيمة الخصم واكتب سبب الخصم (عميل دائم، بيع بالجملة، عرض ترويجي، إلخ).</li>
+                        </ul>
+                        <p><strong>4. إتمام المعاملة والأرشفة المالية</strong></p>
+                        <ul>
+                            <li>يقوم النظام باحتساب المبلغ النهائي بعد الخصم تلقائياً.</li>
+                            <li>اختر طريقة الدفع المناسبة وأكّد عملية البيع.</li>
+                            <li>ستظهر تفاصيل الخصم على الفاتورة المطبوعة بوضوح.</li>
+                            <li>يتم حفظ سبب الخصم وتفاصيله في أرشيف المبيعات للرجوع إليه أثناء التدقيق والجرد.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="tutorial.js"></script>
+    <script src="../translations.js"></script>
+</body>
+</html>

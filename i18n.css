@@ -1,0 +1,241 @@
+/* =========================================================
+   KASHIERK / KAFFII - INTERNATIONAL I18N STYLES
+   ========================================================= */
+
+/* Language Switcher Button */
+.lang-switcher-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #bd382a;
+    border: 1.5px solid rgba(189, 56, 42, 0.28);
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    box-shadow: 0 2px 8px rgba(189, 56, 42, 0.06);
+    font-family: inherit;
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 1.2;
+    user-select: none;
+}
+
+.lang-switcher-btn:hover {
+    background: #bd382a;
+    color: #ffffff;
+    border-color: #bd382a;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(189, 56, 42, 0.22);
+}
+
+.lang-switcher-btn .lang-globe {
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+.lang-switcher-btn .lang-name {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+/* Pricing Topbar Switcher Variation */
+.topbar .lang-switcher-btn {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.38);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.topbar .lang-switcher-btn:hover {
+    background: #ffffff;
+    color: #a92d25;
+    border-color: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   LTR (ENGLISH) GLOBAL & PAGE OVERRIDES
+   ========================================================= */
+
+html[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+}
+
+html[dir="ltr"] body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, 'Tajawal', sans-serif;
+}
+
+/* Landing Page (index.html) LTR adjustments */
+html[dir="ltr"] .hero-layout {
+    text-align: left;
+}
+
+html[dir="ltr"] .hero-points {
+    justify-content: flex-start;
+}
+
+html[dir="ltr"] .hero-buttons {
+    justify-content: flex-start;
+}
+
+html[dir="ltr"] .floating-note span {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+html[dir="ltr"] .note-pos {
+    left: -2%;
+    right: auto;
+}
+
+html[dir="ltr"] .note-store {
+    right: -5%;
+    left: auto;
+}
+
+html[dir="ltr"] .note-remote {
+    left: -5%;
+    right: auto;
+}
+
+html[dir="ltr"] .note-delivery {
+    right: -3%;
+    left: auto;
+}
+
+html[dir="ltr"] .service-card {
+    text-align: left;
+}
+
+html[dir="ltr"] .service-card li {
+    padding-right: 0;
+    padding-left: 22px;
+}
+
+html[dir="ltr"] .service-card li::before {
+    right: auto;
+    left: 0;
+}
+
+html[dir="ltr"] .download-app-grid {
+    text-align: left;
+}
+
+html[dir="ltr"] .download-app-number {
+    left: auto;
+    right: 22px;
+}
+
+html[dir="ltr"] .download-buttons .btn-download-big {
+    text-align: left;
+}
+
+html[dir="ltr"] .store-panel {
+    text-align: left;
+}
+
+html[dir="ltr"] .store-copy {
+    text-align: left;
+}
+
+html[dir="ltr"] .store-section-prominent .store-copy {
+    text-align: center;
+}
+
+html[dir="ltr"] .system-pricing-card,
+html[dir="ltr"] .customer-stores-card {
+    text-align: center;
+}
+
+/* Pricing Page (pricing.html) LTR adjustments */
+html[dir="ltr"] .topbar h1 {
+    text-align: left;
+}
+
+html[dir="ltr"] .plan {
+    text-align: left;
+}
+
+html[dir="ltr"] .features li {
+    padding: 9px 0 9px 38px;
+}
+
+html[dir="ltr"] .features li::before {
+    right: auto;
+    left: 0;
+}
+
+html[dir="ltr"] .section-title {
+    direction: ltr;
+}
+
+html[dir="ltr"] .topbar-inner {
+    direction: ltr;
+}
+
+html[dir="ltr"] .top-icon.back-arrow {
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+/* Appstore Page (appstore.html) LTR adjustments */
+html[dir="ltr"] .heading {
+    text-align: left;
+}
+
+html[dir="ltr"] .card {
+    text-align: left;
+}
+
+html[dir="ltr"] .button svg {
+    transform: rotate(180deg);
+}
+
+/* Tutorial Page (tutorial/index.html) LTR adjustments */
+html[dir="ltr"] .video-content {
+    text-align: left;
+}
+
+html[dir="ltr"] .video-content ul {
+    padding-right: 0;
+    padding-left: 24px;
+}
+
+html[dir="ltr"] .lesson-content p {
+    text-align: left;
+}
+
+/* Mobile responsive for header & switcher */
+@media (max-width: 900px) {
+    .header-nav {
+        gap: 12px;
+    }
+    html[dir="ltr"] .hero-layout {
+        text-align: center;
+    }
+    html[dir="ltr"] .hero-buttons,
+    html[dir="ltr"] .hero-points {
+        justify-content: center;
+    }
+    html[dir="ltr"] .note-pos { left: auto; right: 0; }
+    html[dir="ltr"] .note-store { right: auto; left: 0; }
+    html[dir="ltr"] .note-remote { left: auto; right: 0; }
+    html[dir="ltr"] .note-delivery { right: auto; left: 0; }
+}
+
+@media (max-width: 600px) {
+    .lang-switcher-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    .lang-switcher-btn .lang-globe {
+        font-size: 0.95rem;
+    }
+}
+

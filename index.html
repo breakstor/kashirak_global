@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bd382a">
+    <title>كافي | نظام متكامل لنقاط البيع وإدارة المتاجر التجارية</title>
+    <meta name="description" content="كافي منظومة متكاملة لإدارة المتاجر ونقاط البيع، تجمع بين تطبيق الكاشير وإدارة المخزون والمنتجات والديون والمصروفات والفواتير، وإنشاء متجر إلكتروني احترافي متزامن، مع الإدارة عن بُعد.">
+    <meta name="keywords" content="تطبيق كاشير, نظام نقاط البيع, شاشة بيع, إدارة مخزون, برنامج إدارة المخزون, إضافة منتجات, إدارة الديون, حساب المصروفات, فواتير المبيعات, فواتير المشتريات, إدارة المبيعات, إدارة المحلات التجارية, برنامج محاسبة للمحلات, إنشاء متجر إلكتروني, ربط المتجر الإلكتروني بالكاشير, مزامنة المنتجات والمخزون, كافي, كاشيرك, POS software, point of sale, retail management">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="كافي">
+    <meta property="og:title" content="كافي | نظام نقاط البيع وإدارة المتاجر التجارية">
+    <meta property="og:description" content="إدارة البيع والمخزون والديون والمصروفات والفواتير، مع إنشاء متجر إلكتروني احترافي مرتبط بمنتجات المحل ومخزونه واستقبال طلباته عبر تطبيق كاشيرك وتطبيق الإدارة.">
+    <meta property="og:url" content="https://www.kaffii-sd.com/">
+    <link rel="canonical" href="https://www.kaffii-sd.com/">
+    <script>
+    (function(){
+        var lang = localStorage.getItem('kashirak_lang') || 'ar';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = (lang === 'en') ? 'ltr' : 'rtl';
+    })();
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "كافي",
+      "alternateName": ["كاشيرك", "Kaffii", "Kashirak"],
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Android, Windows",
+      "inLanguage": ["ar", "en"],
+      "description": "منظومة متكاملة لإدارة المتاجر التجارية تشمل تطبيق الكاشير ونقاط البيع والمبيعات والمخزون والمنتجات والديون والمصروفات والفواتير، وإنشاء وتصميم متجر إلكتروني للمحل مرتبط بالمنتجات والمخزون، مع وصول طلبات المتجر إلى تطبيق كاشيرك وتطبيق الإدارة، بالإضافة إلى الإدارة عن بُعد.",
+      "url": "https://www.kaffii-sd.com/"
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="i18n.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <a class="logo" href="#top" aria-label="كافي - الصفحة الرئيسية" data-i18n="logo_kafi">كافي<span>.</span></a>
+            <nav class="header-nav">
+                <a href="#services" data-i18n="nav_services">الخدمات</a>
+                <a href="#business-types" data-i18n="nav_business_types">الأنشطة</a>
+                <a href="https://www.kaffii.store/kafi" target="_blank" rel="noopener" data-i18n="nav_hardware_store">متجر الأجهزة</a>
+                <a href="#final-download" class="btn-primary" data-i18n="nav_download_kafi">تحميل كافي</a>
+                <button type="button" class="lang-switcher-btn" id="langSwitch" aria-label="Switch Language">
+                    <span class="lang-globe">🌐</span>
+                    <span class="lang-name">English</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="container hero-layout">
+                <div class="hero-copy">
+                    <span class="eyebrow" data-i18n="hero_eyebrow">منظومة واحدة لإدارة تجارتك</span>
+                    <h1 data-i18n="hero_title">كافي — نظام متكامل <span>لإدارة متجرك التجاري</span></h1>
+                    <p class="hero-desc" data-i18n="hero_desc">من نقطة البيع وإدارة المخزون، إلى متابعة متجرك عن بُعد وإنشاء متجرك الإلكتروني وتنظيم عمليات التوصيل والمطبوعات. أدوات تجارتك اليومية في مكان واحد.</p>
+                    <div class="hero-buttons">
+                        <a href="#final-download" class="primary-btn" data-i18n="hero_btn_download">تحميل التطبيق</a>
+                        <a href="tutorial/index.html" class="secondary-btn" data-i18n="hero_btn_tutorials">مشاهدة الشروحات</a>
+                    </div>
+                    <div class="hero-points">
+                        <span data-i18n="hero_point_1">✓ إدارة البيع والمخزون</span>
+                        <span data-i18n="hero_point_2">✓ متجر إلكتروني لمتجرك</span>
+                        <span data-i18n="hero_point_3">✓ أدوات مترابطة في منظومة واحدة</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-glow"></div>
+                    <div class="phone-container">
+                        <img src="Images/iphone_frame.png" class="phone-frame" alt="واجهة تطبيق كافي على الهاتف">
+                        <div class="screen">
+                            <div class="slider" id="slider">
+                                <img src="screenshot/slide1.jpg" alt="واجهة تطبيق كافي">
+                                <img src="screenshot/slide2.jpg" alt="إدارة المبيعات في كافي">
+                                <img src="screenshot/slide3.jpg" alt="واجهة إدارة المنتجات">
+                                <img src="screenshot/slide4.jpg" alt="تقارير التطبيق">
+                                <img src="screenshot/slide5.jpg" alt="إدارة المخزون">
+                                <img src="screenshot/slide6.jpg" alt="تفاصيل التطبيق">
+                                <img src="screenshot/slide7.jpg" alt="واجهة إضافية من التطبيق">
+                                <img src="screenshot/slide8.jpg" alt="واجهة إضافية من التطبيق">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-badges" aria-label="خدمات كافي">
+                        <div class="floating-note note-pos"><span aria-hidden="true">▦</span> <span data-i18n="badge_pos">تطبيق كاشير</span></div>
+                        <div class="floating-note note-store"><span aria-hidden="true">▤</span> <span data-i18n="badge_store">متجر إلكتروني</span></div>
+                        <div class="floating-note note-remote"><span aria-hidden="true">⌖</span> <span data-i18n="badge_remote">إدارة عن بُعد</span></div>
+                        <div class="floating-note note-delivery"><span aria-hidden="true">➜</span> <span data-i18n="badge_delivery">إدارة توصيل</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro-section section-pad">
+            <div class="container intro-card">
+                <div class="intro-mark">K</div>
+                <div>
+                    <span class="eyebrow" data-i18n="intro_eyebrow">ما هو كافي؟</span>
+                    <h2 data-i18n="intro_title">أكثر من مجرد كاشير</h2>
+                    <p data-i18n="intro_desc">كافي هو نظام متكامل يمكّنك من إدارة متجرك التجاري بكل سهولة وفاعلية. يساعدك في إدارة عمليات البيع داخل فروعك، ومتابعة المنتجات والمخزون بدقة، ويوفر لك أدوات لإنشاء متجر إلكتروني احترافي مصمم خصيصاً لنشاطك التجاري. ومع ميزات الإدارة عن بُعد وخدمات التوصيل والمطبوعات، يمكنك تنظيم جميع جوانب أعمالك من خلال منصة واحدة متكاملة.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section section-pad" id="services">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow" data-i18n="services_eyebrow">منظومة كافي</span>
+                    <h2 data-i18n="services_title">ماذا يقدم لك كافي؟</h2>
+                    <p data-i18n="services_desc">حلول وخدمات متكاملة تساعدك في إدارة عمليات متجرك اليومية وتوسيع حضورك التجاري.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card service-featured">
+                        <div class="service-icon" aria-hidden="true">▦</div>
+                        <span class="service-index" data-i18n="service_1_index">الخدمة 01</span>
+                        <h3 data-i18n="service_1_title">تطبيق البيع — كاشيرك</h3>
+                        <p data-i18n="service_1_desc">نقطة بيع احترافية لإدارة المبيعات اليومية، مع تنظيم المنتجات والمخزون والفواتير ومتابعة حركة المبيعات مباشرة من داخل المتجر.</p>
+                        <ul>
+                            <li data-i18n="service_1_li_1">تسجيل المبيعات وإصدار الفواتير الفورية</li>
+                            <li data-i18n="service_1_li_2">إدارة كاملة للمنتجات والمخزون والباركود</li>
+                            <li data-i18n="service_1_li_3">تقارير مفصلة لمتابعة حركة المبيعات والأرباح</li>
+                            <li data-i18n="service_1_li_4">دعم العمل دون اتصال بالإنترنت (Offline)</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">⌖</div>
+                        <span class="service-index" data-i18n="service_2_index">الخدمة 02</span>
+                        <h3 data-i18n="service_2_title">إدارة المتجر عن بُعد</h3>
+                        <p data-i18n="service_2_desc">تابع أعمال فروعك في أي وقت ومن أي مكان، واطّلع على مؤشرات الأداء والتقارير التشغيلية المباشرة التي تساعدك على متابعة سير العمل.</p>
+                        <ul>
+                            <li data-i18n="service_2_li_1">متابعة نشاط المتجر لحظياً عن بُعد</li>
+                            <li data-i18n="service_2_li_2">الاطلاع المباشر على مؤشرات المبيعات والأرباح</li>
+                            <li data-i18n="service_2_li_3">إدارة الفروع وصلاحيات الموظفين مركزياً</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">▤</div>
+                        <span class="service-index" data-i18n="service_3_index">الخدمة 03</span>
+                        <h3 data-i18n="service_3_title">متجر إلكتروني متكامل</h3>
+                        <p data-i18n="service_3_desc">أنشئ واجهة متجر إلكتروني مخصصة لعرض منتجاتك، تتيح للعملاء تصفح المنتجات والطلب المباشر عبر الإنترنت مع ربط فوري بالمخزون.</p>
+                        <ul>
+                            <li data-i18n="service_3_li_1">عرض منتجات المتجر في واجهة تسوق احترافية</li>
+                            <li data-i18n="service_3_li_2">تصميم مخصص يناسب هوية نشاطك التجاري</li>
+                            <li data-i18n="service_3_li_3">ربط منتجات المتجر ومخزونه ببيانات الكاشير لحظياً</li>
+                            <li data-i18n="service_3_li_4">استقبال طلبات المتجر مباشرة في تطبيق كاشيرك وتطبيق الإدارة</li>
+                            <li data-i18n="service_3_li_5">قناة مبيعات رقمية متكاملة لزيادة مبيعاتك عبر الإنترنت</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">➜</div>
+                        <span class="service-index" data-i18n="service_4_index">الخدمة 04</span>
+                        <h3 data-i18n="service_4_title">إدارة عمليات التوصيل</h3>
+                        <p data-i18n="service_4_desc">نظّم دورة حياة طلبات التوصيل وتابع تفاصيلها لتكون خطوات تجهيز الطلب وتسليمه واضحة وسلسة في الإدارة.</p>
+                        <ul>
+                            <li data-i18n="service_4_li_1">تنظيم وتوزيع طلبات التوصيل بكل دقة</li>
+                            <li data-i18n="service_4_li_2">متابعة مراحل التسليم وحالات الطلبات لحظة بلحظة</li>
+                            <li data-i18n="service_4_li_3">ترتيب تفاصيل الطلبات وتوجيه مناديب التوصيل</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">▧</div>
+                        <span class="service-index" data-i18n="service_5_index">الخدمة 05</span>
+                        <h3 data-i18n="service_5_title">إدارة المطبوعات والملصقات</h3>
+                        <p data-i18n="service_5_desc">جهّز المطبوعات التي يحتاجها متجرك لتنظيم المنتجات والتسعير والبيع، بما يتناسب مع سير العمل داخل المتجر.</p>
+                        <ul>
+                            <li data-i18n="service_5_li_1">طباعة ملصقات الباركود والأسعار</li>
+                            <li data-i18n="service_5_li_2">ملصقات تواريخ الصلاحية ودفعات الإنتاج</li>
+                            <li data-i18n="service_5_li_3">حوامل رموز الدفع الإلكتروني والـ QR للتحويلات</li>
+                            <li data-i18n="service_5_li_4">قوائم المنتجات وطباعة الفواتير الحرارية</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم متاجر وتطبيقات العملاء -->
+        <section class="customer-stores-section section-pad">
+            <div class="container">
+                <article class="customer-stores-card">
+                    <div class="customer-stores-copy">
+                        <span class="eyebrow" data-i18n="stores_promo_eyebrow">تعرف على عملائنا</span>
+                        <h2 data-i18n="stores_promo_title">اكتشف متاجر عملاء كافي وتطبيقاتهم</h2>
+                        <p data-i18n="stores_promo_desc">تعرّف على عملائنا من خلال منصتنا المخصصة لعرض المتاجر وتطبيقاتها، واكتشف تصاميم المتاجر الإلكترونية والتطبيقات التي أطلقناها لمختلف الأنشطة التجارية.</p>
+                        <a class="customer-stores-btn" href="appstore.html" data-i18n="stores_promo_btn">
+                            تصفح متجر التطبيقات ←
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="business-section section-pad" id="business-types">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow" data-i18n="biz_eyebrow">مصمم لأنشطة متنوعة</span>
+                    <h2 data-i18n="biz_title">كافي مخصص لمختلف المحلات والمتاجر</h2>
+                    <p data-i18n="biz_desc">سواء كنت تدير متجراً صغيراً أو سلسلة فروع تجارية، يمكنك اختيار الأدوات المناسبة لطبيعة عملك.</p>
+                </div>
+                <div class="business-grid">
+                    <div class="business-card"><span aria-hidden="true">🛒</span><h3 data-i18n="biz_supermarket">سوبرماركت وبقالات</h3></div>
+                    <div class="business-card"><span aria-hidden="true">🏪</span><h3 data-i18n="biz_general_retail">متاجر تجزئة ومحلات عامة</h3></div>
+                    <div class="business-card"><span aria-hidden="true">👕</span><h3 data-i18n="biz_fashion">أزياء وملابس</h3></div>
+                    <div class="business-card"><span aria-hidden="true">🌿</span><h3 data-i18n="biz_herbal">أعشاب ومنتجات طبيعية</h3></div>
+                    <div class="business-card"><span aria-hidden="true">🧴</span><h3 data-i18n="biz_perfumes">عطور ومستحضرات تجميل</h3></div>
+                    <div class="business-card"><span aria-hidden="true">💻</span><h3 data-i18n="biz_electronics">إلكترونيات وأجهزة ذكية</h3></div>
+                    <div class="business-card"><span aria-hidden="true">⚙️</span><h3 data-i18n="biz_spare_parts">قطع الغيار والملحقات</h3></div>
+                    <div class="business-card"><span aria-hidden="true">📦</span><h3 data-i18n="biz_wholesale">تجارة الجملة والتوزيع</h3></div>
+                    <div class="business-card"><span aria-hidden="true">🍽️</span><h3 data-i18n="biz_restaurants">مطاعم ووجبات سريعة</h3></div>
+                    <div class="business-card"><span aria-hidden="true">☕</span><h3 data-i18n="biz_cafes">مقاهي وكافتيريات</h3></div>
+                    <div class="business-card"><span aria-hidden="true">💊</span><h3 data-i18n="biz_pharmacies">صيدليات ومستلزمات طبية</h3></div>
+                    <div class="business-card"><span aria-hidden="true">＋</span><h3 data-i18n="biz_others">أنشطة تجارية أخرى</h3></div>
+                </div>
+                <p class="business-note" data-i18n="biz_note">كافي مصمم ليلائم مختلف الأنشطة التي تبيع منتجات أو تقدم خدمات تجارية، مع مرونة تامة لتلبية احتياجات كل قطاع.</p>
+            </div>
+        </section>
+
+        <!-- نظام الاشتراكات: قسم مستقل -->
+        <section class="system-pricing-promo section-pad">
+            <div class="container">
+                <div class="system-pricing-card">
+                    <span class="eyebrow" data-i18n="pricing_promo_eyebrow">أسعار الاشتراكات</span>
+                    <h2 data-i18n="pricing_promo_title">تعرّف على أسعار الاشتراكات في النظام</h2>
+                    <p data-i18n="pricing_promo_desc">اختر الباقة المناسبة لطريقة عمل متجرك وحجم نشاطك التجاري.</p>
+                    <a class="system-pricing-btn" href="pricing.html" data-i18n="pricing_promo_btn">
+                        عرض الباقات والأسعار ←
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- متجر كافي للأجهزة -->
+        <section class="store-section section-pad store-section-prominent">
+            <div class="container">
+                <div class="store-section-heading">
+                    <span class="eyebrow" data-i18n="hardware_eyebrow">متجر كافي للأجهزة</span>
+                    <h2 data-i18n="hardware_title">أجهزة ومستلزمات نقاط البيع</h2>
+                    <p data-i18n="hardware_desc">كل ما تحتاجه لتجهيز نقطة البيع ومتجرك التجاري بأحدث المواصفات.</p>
+                </div>
+
+                <div class="store-panel">
+                    <div class="store-copy">
+                        <h2 data-i18n="hardware_panel_title">جهّز متجرك بأحدث الأجهزة والمستلزمات</h2>
+                        <p data-i18n="hardware_panel_desc">من خلال متجر كافي يمكنك الحصول على أفضل مستلزمات نقاط البيع وتجهيزات المتاجر، لتختار ما يناسب طريقة عملك واحتياجاتك بدقة.</p>
+                        <div class="store-tags">
+                            <span data-i18n="hw_tag_pos">أجهزة كاشير POS</span>
+                            <span data-i18n="hw_tag_laptops">حواسيب محمولة</span>
+                            <span data-i18n="hw_tag_tablets">أجهزة لوحية (تابلت)</span>
+                            <span data-i18n="hw_tag_printers">طابعات إيصالات حرارية</span>
+                            <span data-i18n="hw_tag_accessories">ملحقات وأدراج نقدية</span>
+                            <span data-i18n="hw_tag_scanners">ماسحات باركود</span>
+                        </div>
+                        <div class="store-cta-wrap">
+                            <a class="primary-btn store-cta" href="https://www.kaffii.store/kafi" target="_blank" rel="noopener" data-i18n="hardware_btn">اذهب إلى متجر الأجهزة ←</a>
+                        </div>
+                    </div>
+                    <div class="store-visual" aria-hidden="true">
+                        <div class="device device-laptop"><div class="device-screen"></div><div class="device-base"></div></div>
+                        <div class="device device-tablet"><div class="device-screen"></div></div>
+                        <div class="device device-printer"><div class="printer-slot"></div><div class="printer-paper"></div></div>
+                        <div class="device device-scanner"><span>⌁</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التحميل المباشر -->
+        <section class="download-section" id="final-download">
+            <div class="container">
+                <span class="eyebrow" data-i18n="download_eyebrow">تطبيقات كافي</span>
+                <h2 data-i18n="download_title">اختر التطبيق المناسب لاحتياجاتك</h2>
+                <p data-i18n="download_desc">تطبيقان متكاملان لمساعدتك في إدارة متجرك التجاري من داخل الفرع وعن بُعد.</p>
+
+                <div class="download-app-grid">
+                    <article class="download-app-card download-app-pos">
+                        <span class="download-app-number" data-i18n="app_1_num">01</span>
+                        <div class="download-app-icon" aria-hidden="true">▦</div>
+                        <h3 data-i18n="app_1_title">تطبيق كاشيرك</h3>
+                        <p class="download-app-purpose" data-i18n="app_1_purpose">لإدارة نقاط البيع والمبيعات اليومية، حمّل تطبيق كاشيرك.</p>
+                        <p class="download-app-description" data-i18n="app_1_desc">لإدارة عمليات البيع والفواتير والمنتجات والمخزون من داخل المتجر مع دعم العمل دون إنترنت.</p>
+                        <div class="download-buttons">
+                            <a href="https://github.com/breakstor/Kashirak/releases/download/exe1.3.5/Kashirak.desktop.1-3-5.zip" class="btn-download-big">
+                                <span class="download-symbol download-symbol-windows" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" focusable="false"><path d="M3 4.2 11.2 3v8.1H3V4.2Zm9.4-1.4L21 1.6v9.5h-8.6V2.8ZM3 12.9h8.2V21L3 19.8v-6.9Zm9.4 0H21v9.5l-8.6-1.2v-8.3Z"/></svg>
+                                </span>
+                                <span><strong data-i18n="btn_download_windows">تحميل كاشيرك لويندوز</strong><small data-i18n="sub_download_windows">لأجهزة الكمبيوتر واللابتوب</small></span>
+                            </a>
+                            <a href="https://github.com/breakstor/Kashirak/releases/download/Apk1.3.5/kashirak-1-3-5.apk" class="btn-download-big">
+                                <span class="download-symbol download-symbol-android" aria-hidden="true">
+                                    <svg viewBox="0 0 32 32" focusable="false">
+                                        <path d="M10.1 11.4 7.9 7.7a1 1 0 0 1 1.7-1l2.2 3.7a9.8 9.8 0 0 1 8.4 0l2.2-3.7a1 1 0 1 1 1.7 1l-2.2 3.7A8.3 8.3 0 0 1 26 18v6.2a2 2 0 0 1-2 2h-2v-6.8h-2v6.8h-8v-6.8h-2v6.8H10a2 2 0 0 1-2-2V18a8.3 8.3 0 0 1 2.1-6.6Z"/>
+                                        <circle cx="13" cy="15.5" r="1" fill="currentColor"/>
+                                        <circle cx="19" cy="15.5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span><strong data-i18n="btn_download_android">تحميل كاشيرك لأندرويد</strong><small data-i18n="sub_download_android">للهواتف والأجهزة اللوحية</small></span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="download-app-card download-app-remote">
+                        <span class="download-app-number" data-i18n="app_2_num">02</span>
+                        <div class="download-app-icon" aria-hidden="true">⌖</div>
+                        <h3 data-i18n="app_2_title">تطبيق كافي</h3>
+                        <p class="download-app-purpose" data-i18n="app_2_purpose">لإدارة متجرك عن بُعد ومتابعة المتجر الإلكتروني، حمّل تطبيق كافي.</p>
+                        <p class="download-app-description" data-i18n="app_2_desc">لمتابعة المبيعات والتحكم في إعدادات الفروع وإدارة المتجر الإلكتروني من أي مكان.</p>
+                        <div class="download-buttons">
+                            <a href="https://github.com/breakstor/Kashirak/releases/download/dash-apk.1.0.8/_._._._v1.0.8.apk" class="btn-download-big download-coming-soon" aria-label="رابط تحميل تطبيق كافي لأندرويد">
+                                <span class="download-symbol download-symbol-android" aria-hidden="true">
+                                    <svg viewBox="0 0 32 32" focusable="false">
+                                        <path d="M10.1 11.4 7.9 7.7a1 1 0 0 1 1.7-1l2.2 3.7a9.8 9.8 0 0 1 8.4 0l2.2-3.7a1 1 0 1 1 1.7 1l-2.2 3.7A8.3 8.3 0 0 1 26 18v6.2a2 2 0 0 1-2 2h-2v-6.8h-2v6.8h-8v-6.8h-2v6.8H10a2 2 0 0 1-2-2V18a8.3 8.3 0 0 1 2.1-6.6Z"/>
+                                        <circle cx="13" cy="15.5" r="1" fill="currentColor"/>
+                                        <circle cx="19" cy="15.5" r="1" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span><strong data-i18n="btn_download_kafi_android">تطبيق كافي لأندرويد</strong><small data-i18n="sub_download_kafi_android">تحميل مباشر (ملف APK)</small></span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <p class="download-note"><span data-i18n="download_note_text">للتعرّف على طريقة استخدام كاشيرك، يمكنك أيضاً</span> <a href="tutorial/index.html" data-i18n="download_note_link">مشاهدة الشروحات التعليمية</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a class="logo footer-logo" href="#top" data-i18n="logo_kafi">كافي<span>.</span></a>
+            <p data-i18n="footer_desc">منظومة متكاملة لنقاط البيع وإدارة المتاجر التجارية.</p>
+            <small data-i18n="footer_rights">جميع الحقوق محفوظة © كافي 2026</small>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+</body>
+</html>
